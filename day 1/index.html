@@ -1,14 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FashionHub - Toko Baju Online</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Hello World</h1>
-    <h6>Hello World </h6>
-    <p>kata kata sendirii</p>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h2><i class="fas fa-tshirt"></i> FashionHub</h2>
+            </div>
+            <nav class="nav">
+                <a href="#home">Home</a>
+                <a href="#products">Produk</a>
+                <a href="#about">Tentang</a>
+                <a href="#contact">Kontak</a>
+            </nav>
+            <div class="header-actions">
+                <i class="fas fa-search" id="searchBtn"></i>
+                <i class="fas fa-shopping-cart" id="cartBtn"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-box">
+            <input type="text" placeholder="Cari baju favoritmu..." id="searchInput">
+            <i class="fas fa-times" id="closeSearch"></i>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Temukan Gaya Terbaikmu</h1>
+            <p>Koleksi baju terbaru dengan harga terjangkau</p>
+            <button class="cta-btn">Belanja Sekarang</button>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Produk Terlaris</h2>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products akan dimuat oleh JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h3>Keranjang Belanja</h3>
+            <i class="fas fa-times" id="closeCart"></i>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items akan dimuat oleh JavaScript -->
+        </div>
+        <div class="cart-total">
+            <h3>Total: <span id="cartTotal">Rp 0</span></h3>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 FashionHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
